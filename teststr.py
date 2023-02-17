@@ -24,6 +24,8 @@ for i in range(user_num):
     print(list1[i]["openId"])
 '''
 import hashlib
+import os
+
 '''# 使用 md5 算法
 m = hashlib.md5()
 # 要计算的源数据必须是字节串格式
@@ -46,7 +48,7 @@ import sys
 # 使用 md5 算法
 file_md5= hashlib.md5(data).hexdigest()
 print(file_md5)'''
-import time
+'''import time
 import datetime
 
 t=time.time()
@@ -55,5 +57,15 @@ print(int(t))                  #秒级时间戳
 print(int(round(t * 1000)))
 
 dt = datetime.datetime.now().strftime('%m%d-%H:%M')
-print(dt)
+print(dt)'''
+import tkinter as tk
+from tkinter import filedialog
+
+# 实例化
+root = tk.Tk()
+root.withdraw()
+# 获取文件夹路径
+f_path = filedialog.askopenfilename(initialdir=r"\\192.168.2.100\100\版本迭代")
+print(f_path)
+
 
